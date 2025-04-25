@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  font-weight: normal;
+  background-color: #272727;
+  color: #effffb;
+}
+
+body {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  background-color: #1e1e1e;
+  color: #effffb;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #00adb5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #008b8f;
+}
+
+#result {
+  margin-top: 2rem;
+}
+
+#result img {
+  margin-top: 1rem;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+#vnList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}

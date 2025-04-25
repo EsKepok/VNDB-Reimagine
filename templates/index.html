@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <meta charset="UTF-8" />
+    <title>VN Info</title>
+  </head>
+  <body>
+    <h1>Cari Visual Novel</h1>
+    <input
+      type="text"
+      size="30"
+      id="vnIdInput"
+      placeholder="Masukkan VN ID atau NAMA"
+    />
+    <button onclick="getVNInfo()">Cari</button>
+
+    <!-- (potong di dalam <body>) -->
+    <div id="result"></div>
+    <ul id="vnList"></ul>
+  </body>
+</html>
