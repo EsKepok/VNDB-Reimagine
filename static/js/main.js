@@ -36,11 +36,43 @@ function showVNDetail(vn) {
   const vnList = document.getElementById("vnList");
   vnList.innerHTML = "";
 
+  // Format playtime
+  let playTime = "Unknown";
+  if (vn.length) {
+    const hours = Math.floor(vn.length / 60);
+    const minutes = vn.length % 60;
+    
+    // Determine length category
+    let lengthCategory = "";
+    if (vn.length <= 30) lengthCategory = "Very short";
+    else if (vn.length <= 120) lengthCategory = "Short";
+    else if (vn.length <= 300) lengthCategory = "Medium";
+    else if (vn.length <= 600) lengthCategory = "Long";
+    else lengthCategory = "Very long";
+    
+    playTime = `${lengthCategory} (${hours}h ${minutes}m)`;
+  }
+
+  // Format developers
+  let developers = "Unknown";
+  if (vn.developers && vn.developers.length > 0) {
+    developers = vn.developers.map(dev => dev.name).join(", ");
+  }
+
   resultDiv.innerHTML = `
+    <div class="vn-detail-container">
+      <div class="vn-image-container">
+        <img id="vn_poster" src="${vn.image.url}" alt="${vn.title}">
+      </div>
+      <div class="vn-info-container">
         <h2>${vn.title}</h2>
+        ${vn.aliases ? `<p class="vn-alias"><strong>Aliases:</strong> ${vn.aliases}</p>` : ''}
+        <p><strong>Play Time:</strong> ${playTime}</p>
+        <p><strong>Developer:</strong> ${developers}</p>
         <p><strong>ID:</strong> ${vn.id}</p>
-        <img src="${vn.image.url}" alt="${vn.title}">
-    `;
+      </div>
+    </div>
+  `;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,4 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
       getVNInfo();
     }
   });
+});
+
+// Mobile menu toggle
+document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+  document.querySelector('.navbar-menu').classList.toggle('active');
 });

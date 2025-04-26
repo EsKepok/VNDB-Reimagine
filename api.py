@@ -21,7 +21,7 @@ def get_vn_info():
 
     data = {
         "filters": filters,
-        "fields": "id, title, image.url",
+        "fields": "id, title, aliases, image.url, length, developers.name",
         "results": 10  # ambil maksimal 10 hasil pencarian
     }
 

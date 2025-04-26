@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <meta charset="UTF-8" />
+    <title>{% block title %}VNDB Reimagine{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="{{ url_for('home') }}" class="navbar-brand">VNDB Reimagine</a>
+        <button class="menu-toggle">☰</button>
+        <ul class="navbar-menu">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <!-- Add more links as needed -->
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
