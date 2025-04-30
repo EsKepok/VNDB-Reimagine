@@ -255,6 +255,59 @@ p {
   color: #aaa;
 }
 
+/* Add to your styles.css */
+.vn-description {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.vn-description h3 {
+  color: #00adb5;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.description-content {
+  line-height: 1.6;
+  color: #ddd;
+  background-color: rgba(30, 30, 30, 0.7);
+  padding: 1rem;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.description-content a {
+  color: #00adb5;
+  text-decoration: none;
+}
+
+.description-content a:hover {
+  text-decoration: underline;
+}
+
+.description-content strong {
+  color: #00adb5;
+  font-weight: 500;
+}
+
+.description-content em {
+  font-style: italic;
+  color: #aaa;
+}
+
+/* // Then add this to your CSS: */
+.spoiler {
+  background-color: #333;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.spoiler:hover {
+  color: #ddd;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .vn-detail-container {
@@ -280,5 +333,272 @@ p {
 #result[innerHTML="Loading..."] {
   animation: pulse 1.5s infinite;
   font-style: italic;
+  color: #00adb5;
+}
+
+/* Homepage Styles */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  color: #00adb5;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #effffb;
+  font-weight: normal;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search Section */
+.search-hero {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background-color: #2a2a2a;
+  color: #effffb;
+}
+
+.search-button {
+  padding: 0 1.5rem;
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #008b8f;
+}
+
+.search-examples {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: #777;
+}
+
+.example {
+  color: #00adb5;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.example:hover {
+  color: #effffb;
+  text-decoration: underline;
+}
+
+/* Featured Section */
+.featured-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #effffb;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #00adb5;
+}
+
+.vn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.vn-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vn-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vn-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.vn-card-info {
+  padding: 1rem;
+}
+
+.vn-card-title {
+  font-size: 1rem;
+  color: #effffb;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vn-card-developer {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  color: #00adb5;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 3px solid #ff6b6b;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #ff6b6b;
+  border-radius: 4px;
+}
+
+/* Animation Classes */
+.hidden {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease, display 0.5s step-end;
+}
+
+.visible {
+  opacity: 1;
+  display: block;
+  transition: opacity 0.5s ease, display 0.5s step-start;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Result Container */
+.result-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Animation Styles */
+#homeContainer, #result, #vnList {
+  transition: opacity 0.3s ease;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: #00adb5;
+}
+
+.back-button {
+  background-color: #1e1e1e;
+  color: #effffb;
+  border: 1px solid #00adb5;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(0, 173, 181, 0.1);
+  color: #00adb5;
+}
+
+.vn-option-btn {
+  background: #1e1e1e;
+  border: 1px solid #555;
+  color: #EFFFFB;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.vn-option-btn:hover {
+  border-color: #00adb5;
   color: #00adb5;
 }
